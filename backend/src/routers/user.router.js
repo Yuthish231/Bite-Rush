@@ -22,15 +22,13 @@ const generateTokenResponse = user => {
         name: user.name,
         email: user.email
     },
-    'your-secure-secret-key',
+    'animeyy',
     {
         expiresIn: '1d'
     });
     return {
-        id: user.id,
         email: user.email,
         name: user.name,
-        token,
     };
 };
 
