@@ -1,20 +1,23 @@
 import { Router } from "express";
 import { sample_users } from "../data.js";
 import jwt from 'jsonwebtoken';
+import handler from 'express-async-handler';
+import { UserModel } from "../Models/user.model.js";
+import bcrypt from "bcryptjs";
+import { BAD_REQUEST } from "../constants/httpStatus.js";
 
 const router = Router();
 
-router.post('/login', (req, res) => {
+router.post('/login', 
+    handler(async (req, res) => {
     const { email, password } = req.body;
-    const user = sample_users.find(
-        user => user.email === email && user.password === password
-    );
-    if (user) {
+    const user = await UserModel.findOne({email});
+    if (user && (await bcrypt.compare(password,user.password))) {
         res.send(generateTokenResponse(user));
         return;
     }
-    res.status(400).send('Username or password is invalid');
-});
+    res.status(BAD_REQUEST).send('Username or password is invalid');
+}));
 
 const generateTokenResponse = user => {
     const token = jwt.sign({
@@ -22,7 +25,7 @@ const generateTokenResponse = user => {
         name: user.name,
         email: user.email
     },
-    'animeyy',
+    process.env.SECRET_KEY,
     {
         expiresIn: '1d'
     });

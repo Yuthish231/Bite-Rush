@@ -1,7 +1,14 @@
+import dotenv from 'dotenv';
+dotenv.config();
+console.log('MONGO_URI:', process.env.MONGO_URI);
+
 import express from 'express';
 import bodyParser from 'body-parser';
 import userRouter from './routers/user.router.js';
 import cors from 'cors';
+
+import { dbconnect } from './config/database.config.js';
+dbconnect();
 
 const app = express();
 const PORT = 3000;
