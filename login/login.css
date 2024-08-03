@@ -1,10 +1,12 @@
 body {
-    background-image: url(istockphoto-1182393436-612x612.jpg); 
+    background-image: url(bagg.webp); 
+    background-size: cover;
+    background-repeat: no-repeat;
 }
   
   h1 {
     text-align: center;
-    color: black;
+    color: beige;
     font-size: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 20px; 
@@ -14,8 +16,8 @@ body {
   form {
     text-align: center;
     border-style: solid;
-    border-color: gray;
-    background-color: aliceblue;
+    border-color: rgba(165, 42, 42, 0.367);
+    background-color: rgba(245, 245, 220, 0.393);
     padding: 10px;
     border-radius: 8px;
     margin: auto; 
@@ -37,5 +39,10 @@ a:hover{
     text-decoration: underline;
     }
 button{
-    background-color: rgb(200, 203, 205);
+    background-color: rgb(229, 232, 234);
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+}
+button:hover{
+  cursor: pointer;
 }
