@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 const data = await response.json();
-                alert('Login successful: ' + JSON.stringify(data)); //change the path to the main page instead of an alert
+                window.location.href = '../homepage/homepage.html';
             } else {
                 const error = await response.text();
                 alert('Login failed: ' + error);

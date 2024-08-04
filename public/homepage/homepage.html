@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bite Rush</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Place your order</h1><br>
+            <div class="restaurant" onclick="showMenu('annapoorna')">
+                <img src="rest_images/annapoorna.png" alt="Annapoorna">
+                <p>Annapoorna</p>
+            </div>
+            <div class="restaurant" onclick="showMenu('dominos')">
+                <img src="./rest_images/dominos.png" alt="Dominos">
+                <p>Dominos</p>
+            </div>
+            <div class="restaurant" onclick="showMenu('pizzahut')">
+                <img src="./rest_images/pizzahut.png" alt="Pizza Hut">
+                <p>Pizza Hut</p>
+            </div>
+            <div class="restaurant" onclick="showMenu('kfc')">
+                <img src="./rest_images/kfc.jpeg" alt="KFC">
+                <p>KFC</p>
+            </div>
+            <div class="restaurant" onclick="showMenu('anandhas')">
+                <img src="./rest_images/anandhas.jpg" alt="Anandhas">
+                <p>Anandhas</p>
+            </div>
+            <div class="restaurant" onclick="showMenu('hmr')">
+                <img src="./rest_images/hmr.jpeg" alt="HMR">
+                <p>HMR</p>
+            </div>
+            <div class="restaurant" onclick="showMenu('aryabhavan')">
+                <img src="./rest_images/arya.jpeg" alt="Arya Bhavan">
+                <p>Arya Bhavan</p>
+            </div>
+            <div class="restaurant" onclick="showMenu('Subway')">
+                <img src="./rest_images/subway.png" alt="Subway">
+                <p>Subway</p>
+            </div>
+            <div class="restaurant" onclick="showMenu('haribhavanam')">
+                <img src="./rest_images/haribhavanam.png" alt="Hari Bhavanam">
+                <p>Hari Bhavanam</p>
+            </div>
+            <div class="restaurant" onclick="showMenu('bbqnation')">
+                <img src="./rest_images/bbq.jpeg" alt="BBQ Nation">
+                <p>BBQ Nation</p>
+            </div>
+        </div>
+        <div class="food-carousel">
+            <div class="food-item">
+                <img src="./rest_images/biryani.jpeg" alt="Biryani">
+                <p>Biryani</p>
+            </div>
+            <div class="food-item">
+                <img src="./rest_images/chicken.jpeg" alt="Chicken">
+                <p>Chicken</p>
+            </div>
+            <div class="food-item">
+                <img src="./rest_images/pizza.jpeg" alt="Pizza">
+                <p>Pizza</p>
+            </div>
+            <div class="food-item">
+                <img src="./rest_images/friedrice.jpeg" alt="Fried Rice">
+                <p>Fried Rice</p>
+            </div>
+            <div class="food-item">
+                <img src="./rest_images/burger.jpeg" alt="Burger">
+                <p>Burger</p>
+            </div>
+            <div class="food-item">
+                <img src="./rest_images/paratha.jpeg" alt="Paratha">
+                <p>Paratha</p>
+            </div>
+            <!-- Add more food items as needed -->
+        </div>
+        
+    </div>
+
+    <div class="menu-container" id="menu-container">
+        <button class="close-menu" onclick="closeMenu()">X</button>
+        <div class="menu-content" id="menu-content">
+            <!-- Menu items will be displayed here dynamically -->
+        </div>
+    </div>
+
+    <script src="homepage.js"></script>
+</body>
+</html>
