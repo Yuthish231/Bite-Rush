@@ -1,8 +1,7 @@
 import {model,Schema} from 'mongoose';
-
 export const UserSchema =new Schema(
     {
-        name: {type:String,required:true},
+        username: {type:String,required:true},
         email: {type:String,required:true,unique:true},
         password: {type:String,required:true},
         isAdmin: {type:String,default:false},
@@ -14,8 +13,7 @@ export const UserSchema =new Schema(
         },
         toObject: {
             virtuals:true,
-            },
+        },
     }
 );
-
 export const UserModel=model('user',UserSchema);

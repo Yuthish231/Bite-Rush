@@ -120,35 +120,27 @@ const menus = {
         { name: "Brownie", price: "₹90", image: "images/brownie.jpg" }
     ]
 };
-
 function showMenu(restaurant) {
     const menuContainer = document.getElementById('menu-container');
     const menuContent = document.getElementById('menu-content');
     menuContent.innerHTML = '';
-
     if (menus[restaurant]) {
         menus[restaurant].forEach(item => {
             const itemDiv = document.createElement('div');
             itemDiv.className = 'menu-item';
-
             const img = document.createElement('img');
             img.src = item.image;
             img.alt = item.name;
-
             const name = document.createElement('p');
             name.textContent = item.name;
-
             const price = document.createElement('p');
             price.textContent = item.price;
-
             const selectButton = document.createElement('button');
             selectButton.textContent = 'Select Food';
             selectButton.className = 'select-button';
-
             const reviewButton = document.createElement('button');
             reviewButton.textContent = 'Review Food';
             reviewButton.className = 'review-button';
-
             itemDiv.appendChild(img);
             itemDiv.appendChild(name);
             itemDiv.appendChild(price);
@@ -158,7 +150,6 @@ function showMenu(restaurant) {
             menuContent.appendChild(itemDiv);
         });
     }
-
     menuContainer.style.display = 'flex';
 }
 

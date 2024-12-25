@@ -1,24 +1,30 @@
 import dotenv from 'dotenv';
-dotenv.config();
-console.log('MONGO_URI:', process.env.MONGO_URI);
-
 import express from 'express';
 import bodyParser from 'body-parser';
-import userRouter from './routers/user.router.js';
+import loginRouter from './routers/user.router.js';
 import cors from 'cors';
+import dbConnect from './config/db.js';
+import registerRouter from './routers/register.router.js'
 
-import { dbconnect } from './config/database.config.js';
-dbconnect();
+dotenv.config();
+dbConnect();
+
+//Load the app
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/api', userRouter);
+//Routes
+
+app.use('/api', loginRouter);
+app.use('/api',registerRouter)
+
+//Listen Port
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -12,20 +12,27 @@ body {
 .container {
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
 }
 
 h1 {
+    text-align: center;
     color: beige;
     margin-bottom: 20px;
     font-size: 45px;
 }
 
 .restaurant-list {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    display: flex;
 }
 
 
@@ -85,7 +92,7 @@ h1 {
     padding: 5px 10px;
 }
 
-.food-carousel {
+.food-carousel{
     display: flex;
     overflow-x: auto;
     padding: 20px 0;
@@ -94,9 +101,7 @@ h1 {
     justify-content: center;
 }
 
-.food-carousel::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-}
+
 
 .food-item {
     flex: 0 0 auto; 

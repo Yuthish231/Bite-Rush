@@ -1,56 +1,139 @@
+/* Background Styling */
 body {
-    background-image: url(bagg.webp); 
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;  /* Remove default margin */
-    padding: 0; /* Remove default padding */
+  background-image: url('bagg.webp'); /* Assuming this is the wooden plank image */
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif; /* Default font */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-  
-  h1 {
-    text-align: center;
-    color: beige;
-    font-size: 50px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 20px; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  form {
-    text-align: center;
-    border-style: solid;
-    border-color: rgba(165, 42, 42, 0.367);
-    background-color: rgba(245, 245, 220, 0.393);
-    padding: 10px;
-    border-radius: 8px;
-    margin: auto; 
-    width: 200px; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
 
-#logo{
-  width: 50px;
-  height: 30px;
-  margin: 0;   /* Remove margin */
-  padding: 0;  /* Remove padding */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+/* Container Styling for the Form */
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85); /* Light cream background with opacity */
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Subtle shadow for better visibility */
+  width: 100%;
+  max-width: 350px; /* Reduced width */
+  margin: 0 20px; /* Margin to prevent sticking to the edges */
 }
-a{
-    text-decoration: none;
-    color: black;
 
+/* Title Styling */
+h1 {
+  font-size: 36px;
+  color: #4B2C20; /* Dark brown color for contrast */
+  margin-bottom: 5px; /* Reduced space between title and form */
+  font-family: 'Verdana', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Slight shadow for readability */
 }
-a:hover{
-    color: blue;
-    text-decoration: underline;
-    }
-button{
-    background-color: rgb(229, 232, 234);
-    border-radius: 10px;
-    transition: background-color 0.2s ease;
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; /* Reduced gap between elements */
 }
-button:hover{
+
+/* Logo Image Styling */
+#logo {
+  width: 50px; /* Reduced size */
+  height: 35px; /* Adjusted height */
+  margin-bottom: 5px; /* Reduced space between logo and text */
+}
+
+/* Input Fields Styling */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #8B5C40; /* Brown border for input fields */
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus Effect on Input Fields */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #5d9bfc;
+  outline: none;
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #4CAF50; /* Green button for a contrast pop */
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Links Section */
+.links {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+a:hover {
+  color: #45a049;
+  text-decoration: underline;
+}
+
+/* Text Styling for Login Prompt */
+.login-text {
+  font-family: 'Cursive', sans-serif;
+  font-size: 22px; /* Slightly reduced size */
+  margin: 5px 0; /* Reduced spacing */
+}
+
+/* Label Styling */
+.label-text {
+  font-family: 'Cursive', sans-serif;
+  font-size: 16px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  h1 {
+      font-size: 30px;
+  }
+
+  .container {
+      width: 90%; /* Reduce the width on small screens */
+      padding: 15px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+      font-size: 14px;
+  }
+
+  button {
+      font-size: 14px;
+  }
+
+  .links {
+      font-size: 12px;
+  }
 }
