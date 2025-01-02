@@ -21,7 +21,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Routes
 
 app.use('/api', loginRouter);
-app.use('/api',registerRouter)
+app.use('/api',registerRouter);
+
 
 //Listen Port
 

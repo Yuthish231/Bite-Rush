@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 const data = await response.json();
+                localStorage.setItem('authToken', data.token);
                 window.location.href = '../homepage/homepage.html';
             } else {
                 const error = await response.text();
